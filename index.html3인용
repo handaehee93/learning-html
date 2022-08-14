@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--html에서 속성이란 것이 있는데 속성은 태그의 동작을 설정 및 제어 하는 것을 의미한다.
+      태그마다 설정 가능한 속성들이 있다-->
+  <!--속성이 쓰이는 태그중에 blockquote라는 태그가 있는데 이 태그는 길이가 긴 인용문을 
+  인용할때 사용하는데 그 출처를 cite속성으로 나타내주고 인용한 내용을 <blockquote>와 </blockquote>사이에 써주면 된다. -->   
+  <!--어떤 태그를 속성과 같이 emmet으로 작성을 하려면 blockquote[cite=""]이런식으로 대괄호
+  를 사용해 주면 된다.-->  
+  <blockquote cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/blockquote">
+    <p> HTML <blockquote> 요소는 안쪽의 텍스트가 긴 인용문임을 나타냅니다. 주로 들여쓰기를 한 것으로 그려집니다. (외형을 바꾸는 법은 사용 일람을 참고하세요) 인용문의 출처 URL은 cite 특성으로, 출처 텍스트는 <cite> 요소로 제공할 수 있습니다.</p>
+  </blockquote>
+  <cite> &lt;blockquote&gt; : 인용 블록 요소</cite>
+  <!--cite는 태그의 속성뿐 아니라 태그로도 사용이 되는데 속성으로 사용되는 cite는
+      인용문을 가져온 주소를 적어주는 거고 태그로 사용되는 cite는 인용문의 제목을 나타낼때 사용한다.-->
+  <!--주의할점이 있는데 여기서 blockquote로 인용한 인용문의 내용을 보면 <blockquote>라고 써져 있는 부분이 있다. 의도는 웹상에 꺽쇠를 나타내고 싶은건데 html에 꺽쇠를 쓰면 html이 이걸 태그로 인식을 해서 웹상에 꺽쇠 모양이 나타나질않는다. 따라서 꺽쇠를 웹상에 나타내고 싶다면
+    스페이스를 &nbsp;로 나타낸것 처럼 &lt;(여는꺽쇠), &gt;(닫는꺽쇠)로 나타내 주면 된다.lt는 less than의 약자 gt는 greater than의 약자로 부등호로 기억하자-->
+    <br>
+    &lt;꺽쇠&gt;
+
+    <!--긴용문은 blockquote를 사용하고 blockquote를 사용하면 인용문이 주로 들여쓰기를 한 형태로 나타내진다. 근데 문장 속에서 큰따음표로 인용되는 짧은 인용문을 인용할때는 q태그를 사용한다.q태그도 blockquote와 마찬가지로 cite속성으로 주소를 나타내 줘야한다.-->
+    <p>
+      q태그는 <q cite="https://developer.mozilla.org/ko/docs/Web/HTML/Element/q">둘러싼 텍스트가 짧은 인라인 인용문이라는것을 나타냅니다.</q>
+    </p>
+    <!--추가적으로 mark태그가 있는데 mark태그는 인용문 중 강조하고 싶은 부분이 있거나(강조한 부분의 색이 변함) 사용자가 예를들어 사과를 검색을 했으면 그 페이지에서 사과라고 되어 있는 부분에 색이 나타나게 할때 사용된다.-->
+    <mark>마크태그</mark>
+
+    <!--속성이 사용되는 태그중에 abbr이라는 태그가 있는데 이 태그는 웹상에 나와있는 두문자나 약자에 마우스를 가져가면 그 풀네임이 나타나게 하는 태그다. 이때 풀네임이 들어가는 속성은 title이라는 속성을 사용한다. -->
+    <br>
+    <abbr title="Hyper text markup lanaguage">html</abbr>
+</body>
+</html>
