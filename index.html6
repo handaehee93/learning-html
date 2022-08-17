@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--표를 만들때 사용되는 태그는 table이다.-->
+  <!--표의 제목을 넣어 줄때는  caption태그를 사용한다. -->
+  <!--테이블의 행 즉 가로는 tr태그를 이용한다.-->
+  <!--테이블의 각 셀은 td태그를 이용한다.-->
+  <!--테이블 치고 제목 치고 가로줄 하나에 몇개의 셀을 설정할건지 치고 
+      가로줄은 몇개를 만들건지를 아래의 형태로 입력해 주면 된다.-->
+  <!--table>caption+(tr>td*3)*3-->
+  <!--여기 까지 하면 숫자만 나열 될뿐 표의 형태로 나타나진 않을 것이다.
+      표의 형태는 css로 만들어 줄 것이다.-->
+  <table>
+    <caption>1부터9</caption>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </table>
+
+  <!--표를 만들때 각 행과 열의 제목이 되는 항목들을 넣어 줄 수 있다-->
+  <!--thead태그는 표의 가장 위에 있는 가로줄의 제목 항목들을 의미한다.가장 위에 있는 가로줄의 셀들은 모두 각 열의 제목을 의미하므로 th태그를 함께 사용한다.thead는 tbody앞에 와야한다.-->
+  <!--tbody태그는 표의 본문을 의미하고 각 행의 제목이 되는 부분은 thead와 마찬가지로 th태그를 이용하고 내용 부분은 td를 이용한다.-->
+  <!--tfoot태그는 표의 마지막 행을 의미하고-->
+  <!--표는 가로줄을 왼쪽에서 오른쪽으로 채운 다음 그 다음 가로줄을 똑같이 채워 나가면서 완성한다고 생각하자.-->
+  <!--()를 묶어도 보고 안 묶어도 보면서 코드 구성이 어떻게 변하는지도 한번 해보자-->
+  <!--table>caption+(thead>tr>th*4)+(tbody>(tr>th+td*3))*3+(tfoot>(tr>th+td*3)) 이런식으로 하면 된다.-->
+  <!--그리고 각 행과 열의 제목으로 사용되는 th태그들은 각각의 th가 행의 제목인지
+      열의 제목인지를 입력 해주어야 한다. th태그 안에 속성으로 scope를 사용하고
+      행의 제목은 row로 열의 제목은 col로 입력한다.-->
+  <table>
+    <caption>공부시간</caption>
+    <thead>
+      <tr>
+        <th scope="col">과목</th>
+        <th scope="col">1교시</th>
+        <th scope="col">2교시</th>
+        <th scope="col">3교시</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">html</th>
+        <td>1시간</td>
+        <td>1시간</td>
+        <td>1시간</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th scope="row">css</th>
+        <td>1시간</td>
+        <td>1시간</td>
+        <td>1시간</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th scope="row">js</th>
+        <td>2시간</td>
+        <td>3시간</td>
+        <td>4시간</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">총시간</th>
+        <td>4시간</td>
+        <td>5시간</td>
+        <td>6시간</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!--표를 만들고 각각의 셀을 병합할 수 있는데 
+      열 병합 때는 colspan속성을
+      행 병합 때는 rowspan속성을 사용한다. -->
+  <!--각 행이 다 1인 4*4표를 만들어 보자-->
+  <!--table>(tr>td{1}*4)*4-->
+  <!--첫번째 줄의 가운데 두개를 병합하려면 열 병합 이니까 colspan과 병합하는 열의 갯수를 적어주고 두 셀의 합을 적어준다. 그다음 병합 후 열 하나가 하나의 열이 줄어드는 거니까 한줄의 td를 지운다.-->
+  <!--행 병합은 각 tr의 하나씩을 병합 하는 것이므로 rowspan적어주고 각 tr의 한 줄씩을 지워준다. -->
+  <!--행과 열을 동시에 병합하려면 병합 하려는 부분을 정해서 둘다 입력해 주면 된다.-->
+  <table>
+    <tr>
+      <td>1</td>
+      <td colspan="2">2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td rowspan="3">3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td colspan="2" rowspan="2">4</td>
+    </tr>
+    <tr>
+      <td>1</td>
+    </tr>
+  </table>
+ 
+</body>
+</html>
