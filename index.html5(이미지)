@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--이미지를 넣고 싶을때는 img태그를 사용한다.-->
+  <!--코드를 입력하기 전에 무료 이미지 사이트에서 이미지 몇개를 index.html파일이 저장되는 폴더에 넣어놓고 시작하자-->
+  <!--이미지 태그를 사용할때는 속성으로 출처를 나타내는 src와 이미지에 대한 설명인 alt를 사용한다.alt는 altanative의 약자로 이미지를 볼 수 없는 경우에 그에 대한 설명을 해주기 위해서 사용한다.src에 들어가는 주소를 틀리게 바꿔 보면 이미지가 뜨지 않고 alt에 입력한 내용이 뜨는 걸 볼 수 있다.-->
+  <!--img태그의 속성 중에 title이라는 태그도 있는데 이 태그는 이미지에 마우스를 가져가면 그 이미지에 대한 설명이 나오게 하는 용도로 쓰인다-->
+  <img src="https://cdn.pixabay.com/photo/2022/05/09/18/05/dog-7185274_960_720.jpg" alt="강아지 얼굴" title="강아지">
+
+  <!--위의 예시처럼 남의 이미지를 가져오는 경우에는 주소를 다 입력해 주어야 하지만
+      이미지가 내 폴더안에 있는 경우에는 ./로 가져올 수 있다.-->
+  <!--현재 html이라는 파일 속에 index.html이 저장이 되고 있는 걸 확인 할 수 있을 것이다. 헷갈리면 html이라고 되어있는 폴더에 들어가 보자.만약 이미지가 html이라는 폴더에 index.html파일과 같이 존재하고 있다면 ./누르고 탭 누르면 index.html이 속해 있는 폴더 속에 있는 내용물 들 중 고를 수 있는 창이 나올 것 인데 거기서 넣고 싶은 이미지를 눌러주면 된다.즉 쉽게 말해 ./치고 탭 누르면 index.html이 속해있는 html이라는 폴더에 있는 내용물들의 목록이 emmet으로 뜬다고 생각하면 된다.-->
+  <!--그런데 만약에 index.html이 저장되어 있는 html이라는 폴더 속에 또 다른 images폴더가 있다면 ./탭 누르면 index.html과 images라는 폴더가 뜰것이다.만약 내가 넣고 싶은 이미지가 html이라는 폴더 속 images라는 폴더 안에 있다면 ./탭 누르고 images누르고 그 안에 있는 이미지를 눌러주면 된다. -->
+  
+  
+  <img src="./bird-7356346_960_720.webp" alt="">
+  <!--이미지가 index.html파일이 저장되는 html폴더에 있는 경우-->
+  
+  <img src="./images새/bird-7362864_960_720.webp" alt="">
+  <!--이미지가 html이라는 폴더 안에 또 다른 폴더인 images폴더에 있는 경우-->
+
+  
+  <!--그런데 만약에 우리가 입력하고 있는 index.html파일이 html이라는 폴더 안에 또다른 폴더인 html2에 저장이 되고 있고, 이미지는 html이라는 폴더에 그냥 저장이 되어 있다면 
+  <img src="../탭">을 사용해서 html2폴더 밖으로 나가서 이미지를 골라 줘야 하므로  
+  ../탭을 사용하여 index.html이 저장되는 html2폴더에서 나간 다음 이미지 파일을 선택해 주면 된다. -->
+  <!--html2라는 폴더를 만들고 index.html파일을 html2로 옮겨서 아래의 코드 처럼 입력해   보자 -->
+  
+  <img src="../html/bird-7356346_960_720.webp" alt="">
+
+  <!--이미지의 너비와 높이도 조절할 수 있다.
+      너비는 width태그 높이는 height태그를 사용한다.-->
+
+  <img src="./dog-7185274_960_720.webp" alt="강아지" width="300">
+  <img src="./bird-7356346_960_720.webp" alt="새" height="300">
+  <!--이처럼 너비와 높이중 하나만 설정해주면 이미지의 비율이 그대로 유지 되면서
+      크기가 줄어들지만, 아래처럼 둘다 설정을 해주면 그 설정에 맞춰지기 때문에 원본의 비율이 변하게 된다.-->
+  <img src="./dog-7185274_960_720.webp" alt="강아지" width="300" height="300">
+
+  
+</body>
+</html>
